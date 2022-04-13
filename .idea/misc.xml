@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1725" />
+        <entry key="app/src/main/res/drawable/ic_person_black_24dp.xml" value="0.1725" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17933130699088146" />
+        <entry key="app/src/main/res/layout/activity_star.xml" value="0.18617021276595744" />
+        <entry key="app/src/main/res/layout/coffee_fragment.xml" value="0.18617021276595744" />
+        <entry key="app/src/main/res/layout/fish_fragment.xml" value="0.17933130699088146" />
+        <entry key="app/src/main/res/layout/fragment_bird.xml" value="0.18617021276595744" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.18617021276595744" />
+        <entry key="app/src/main/res/layout/fragment_fly.xml" value="0.17933130699088146" />
+        <entry key="app/src/main/res/layout/fragment_fly2.xml" value="0.18617021276595744" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18617021276595744" />
+        <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.18617021276595744" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.18617021276595744" />
+        <entry key="app/src/main/res/layout/nav_header.xml" value="0.18617021276595744" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.26153846153846155" />
+        <entry key="app/src/main/res/menu/nav_menu.xml" value="0.27870370370370373" />
+        <entry key="customView/src/main/res/layout/activity_show_custom_view.xml" value="0.14969604863221886" />
+        <entry key="customView/src/main/res/layout/activity_show_drawable_and_bitmap.xml" value="0.14969604863221886" />
+        <entry key="customView/src/main/res/layout/activity_show_material_edit.xml" value="0.14969604863221886" />
+        <entry key="customView/src/main/res/layout/activity_show_point_view.xml" value="0.14969604863221886" />
+        <entry key="customView/src/main/res/layout/activity_show_province_view.xml" value="0.14969604863221886" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

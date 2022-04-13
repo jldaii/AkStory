@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/gray</item>
+    </style>
+
+</resources>
