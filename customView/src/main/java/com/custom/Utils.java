@@ -1,10 +1,7 @@
 package com.custom;
 
 import android.content.res.Resources;
-import android.graphics.BitmapFactory;
 import android.util.TypedValue;
-
-import com.custom.views.R;
 
 
 public class Utils {

@@ -13,7 +13,7 @@ import com.custom.views.CameraPageTurningAnmView
 import com.custom.views.R
 
 class ShowCustomViewActivity : AppCompatActivity() {
-    val a :String? = null
+    val a: String? = null
 
     val view: CameraPageTurningAnmView by lazy {
         findViewById(R.id.view)
@@ -114,8 +114,6 @@ class ShowCustomViewActivity : AppCompatActivity() {
         }
         holderAnimator.start()
     }
-
-
 
 
 }

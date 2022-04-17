@@ -1,8 +1,8 @@
 package com.custom.ui.activity
 
 import android.animation.ObjectAnimator
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.custom.dp
 import com.custom.views.ProvinceEvaluator
 import com.custom.views.R

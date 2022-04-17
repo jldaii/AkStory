@@ -4,7 +4,6 @@ import android.animation.TypeEvaluator;
 import android.graphics.PointF;
 
 
-
 public class PointFEvaluator1 implements TypeEvaluator<PointF> {
     @Override
     public PointF evaluate(float fraction, PointF startValue, PointF endValue) {

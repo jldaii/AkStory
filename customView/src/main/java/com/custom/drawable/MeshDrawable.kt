@@ -20,7 +20,7 @@ class MeshDrawable : Drawable() {
 
     override fun draw(canvas: Canvas) {
         var x = bounds.left.toFloat()
-        while (x <= bounds.right){
+        while (x <= bounds.right) {
             canvas.drawLine(
                 x,
                 bounds.top.toFloat(),
@@ -31,7 +31,7 @@ class MeshDrawable : Drawable() {
             x += INTERVAL
         }
         var y = bounds.top.toFloat()
-        while (y <= bounds.bottom){
+        while (y <= bounds.bottom) {
             canvas.drawLine(
                 bounds.left.toFloat(),
                 y,

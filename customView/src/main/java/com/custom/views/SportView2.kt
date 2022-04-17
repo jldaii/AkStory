@@ -11,8 +11,6 @@ import androidx.core.content.res.ResourcesCompat
 import com.custom.dp
 
 
-
-
 class SportView2(context: Context, attrs: AttributeSet?) :
     View(context, attrs) {
 
@@ -59,7 +57,12 @@ class SportView2(context: Context, attrs: AttributeSet?) :
         paint.textSize = 100.dp
         paint.style = Paint.Style.FILL
         paint.getFontMetrics(fontMetrics)
-        canvas.drawText("aaaa",width/2f,height/2f-(fontMetrics.ascent + fontMetrics.descent)/2f,paint)
+        canvas.drawText(
+            "aaaa",
+            width / 2f,
+            height / 2f - (fontMetrics.ascent + fontMetrics.descent) / 2f,
+            paint
+        )
         /**
          * 动态文字
          * 绘制文字2
@@ -67,14 +70,14 @@ class SportView2(context: Context, attrs: AttributeSet?) :
         paint.textSize = 150.dp
         paint.textAlign = Paint.Align.LEFT
         paint.getFontMetrics(fontMetrics)
-        paint.getTextBounds("abcd",0,"abcd".length,bounds)
-        canvas.drawText("abcd",-bounds.left.toFloat(),-bounds.top.toFloat(),paint)
+        paint.getTextBounds("abcd", 0, "abcd".length, bounds)
+        canvas.drawText("abcd", -bounds.left.toFloat(), -bounds.top.toFloat(), paint)
 
         /**
          * 绘制文字3
          */
         paint.textSize = 15.dp
-        paint.getTextBounds("abcd",0,"abcd".length,bounds)
+        paint.getTextBounds("abcd", 0, "abcd".length, bounds)
         canvas.drawText("abcd", -bounds.left.toFloat(), -bounds.top.toFloat(), paint)
 
 

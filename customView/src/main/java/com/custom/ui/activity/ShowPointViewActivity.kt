@@ -2,8 +2,8 @@ package com.custom.ui.activity
 
 import android.animation.ObjectAnimator
 import android.graphics.PointF
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.custom.animator.PointFEvaluator
 import com.custom.dp
 import com.custom.views.R
@@ -14,7 +14,8 @@ class ShowPointViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_point_view)
 
-        val animator = ObjectAnimator.ofObject(view, "point", PointFEvaluator(), PointF(100.dp, 200.dp))
+        val animator =
+            ObjectAnimator.ofObject(view, "point", PointFEvaluator(), PointF(100.dp, 200.dp))
         animator.startDelay = 1000
         animator.duration = 2000
         animator.start()

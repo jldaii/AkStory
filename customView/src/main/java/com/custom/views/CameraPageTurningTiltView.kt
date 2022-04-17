@@ -17,7 +17,7 @@ class CameraPageTurningTiltView(context: Context?, attrs: AttributeSet?) : View(
     init {
         camera.rotateX(30f)
         // 控制投影距离
-        camera.setLocation(0f,0f,-6 * resources.displayMetrics.density)
+        camera.setLocation(0f, 0f, -6 * resources.displayMetrics.density)
 
     }
 
@@ -37,22 +37,22 @@ class CameraPageTurningTiltView(context: Context?, attrs: AttributeSet?) : View(
 
         // 上半部分
         canvas.save()
-        canvas.translate((BITMAP_PADDING + BITMAP_SIZE/2),(BITMAP_PADDING + BITMAP_SIZE/2))
+        canvas.translate((BITMAP_PADDING + BITMAP_SIZE / 2), (BITMAP_PADDING + BITMAP_SIZE / 2))
         canvas.rotate(-30f)
-        canvas.clipRect(-BITMAP_SIZE,-BITMAP_SIZE,BITMAP_SIZE,0f)
+        canvas.clipRect(-BITMAP_SIZE, -BITMAP_SIZE, BITMAP_SIZE, 0f)
         canvas.rotate(30f)
-        canvas.translate(-(BITMAP_PADDING + BITMAP_SIZE/2),-(BITMAP_PADDING + BITMAP_SIZE/2))
+        canvas.translate(-(BITMAP_PADDING + BITMAP_SIZE / 2), -(BITMAP_PADDING + BITMAP_SIZE / 2))
         canvas.drawBitmap(bitmap, BITMAP_PADDING, BITMAP_PADDING, paint)
         canvas.restore()
 
         // 下半部分
         canvas.save()
-        canvas.translate((BITMAP_PADDING + BITMAP_SIZE/2),(BITMAP_PADDING + BITMAP_SIZE/2))
+        canvas.translate((BITMAP_PADDING + BITMAP_SIZE / 2), (BITMAP_PADDING + BITMAP_SIZE / 2))
         canvas.rotate(-30f)
         camera.applyToCanvas(canvas)
-        canvas.clipRect(-BITMAP_SIZE,0f,BITMAP_SIZE,BITMAP_SIZE)
+        canvas.clipRect(-BITMAP_SIZE, 0f, BITMAP_SIZE, BITMAP_SIZE)
         canvas.rotate(30f)
-        canvas.translate(-(BITMAP_PADDING + BITMAP_SIZE/2),-(BITMAP_PADDING + BITMAP_SIZE/2))
+        canvas.translate(-(BITMAP_PADDING + BITMAP_SIZE / 2), -(BITMAP_PADDING + BITMAP_SIZE / 2))
         canvas.drawBitmap(bitmap, BITMAP_PADDING, BITMAP_PADDING, paint)
         canvas.restore()
 
@@ -61,8 +61,8 @@ class CameraPageTurningTiltView(context: Context?, attrs: AttributeSet?) : View(
     fun getAvatar(winth: Int): Bitmap {
         val options = BitmapFactory.Options()
         options.inJustDecodeBounds = true
-        BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options);
-        options.inJustDecodeBounds = false;
+        BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)
+        options.inJustDecodeBounds = false
         options.inDensity = options.outWidth
         options.inTargetDensity = winth
         return BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)

@@ -16,14 +16,14 @@ class CircleView(context: Context?, attrs: AttributeSet?) : View(context, attrs)
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val size = ((PADDING + RADIUS) * 2).toInt()
-        val width = resolveSize(size,widthMeasureSpec)
-        val height = resolveSize(size,heightMeasureSpec)
-        setMeasuredDimension(width,height)
+        val width = resolveSize(size, widthMeasureSpec)
+        val height = resolveSize(size, heightMeasureSpec)
+        setMeasuredDimension(width, height)
 
     }
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas.drawCircle(PADDING + RADIUS,PADDING + RADIUS,RADIUS, paint)
+        canvas.drawCircle(PADDING + RADIUS, PADDING + RADIUS, RADIUS, paint)
     }
 }

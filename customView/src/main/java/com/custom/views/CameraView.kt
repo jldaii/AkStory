@@ -17,7 +17,7 @@ class CameraView(context: Context?, attrs: AttributeSet?) : View(context, attrs)
     init {
         camera.rotateX(30f)
         // 控制投影距离
-        camera.setLocation(0f,0f,-3 * resources.displayMetrics.density)
+        camera.setLocation(0f, 0f, -3 * resources.displayMetrics.density)
 
     }
 
@@ -42,9 +42,9 @@ class CameraView(context: Context?, attrs: AttributeSet?) : View(context, attrs)
 //            BITMAP_PADDING + BITMAP_SIZE / 2,
 //            BITMAP_PADDING + BITMAP_SIZE / 2
 //        )
-        canvas.translate((BITMAP_PADDING + BITMAP_SIZE/2),(BITMAP_PADDING + BITMAP_SIZE/2))
+        canvas.translate((BITMAP_PADDING + BITMAP_SIZE / 2), (BITMAP_PADDING + BITMAP_SIZE / 2))
         camera.applyToCanvas(canvas)
-        canvas.translate(-(BITMAP_PADDING + BITMAP_SIZE/2),-(BITMAP_PADDING + BITMAP_SIZE/2))
+        canvas.translate(-(BITMAP_PADDING + BITMAP_SIZE / 2), -(BITMAP_PADDING + BITMAP_SIZE / 2))
         canvas.drawBitmap(bitmap, BITMAP_PADDING, BITMAP_PADDING, paint)
 
     }
@@ -52,8 +52,8 @@ class CameraView(context: Context?, attrs: AttributeSet?) : View(context, attrs)
     fun getAvatar(winth: Int): Bitmap {
         val options = BitmapFactory.Options()
         options.inJustDecodeBounds = true
-        BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options);
-        options.inJustDecodeBounds = false;
+        BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)
+        options.inJustDecodeBounds = false
         options.inDensity = options.outWidth
         options.inTargetDensity = winth
         return BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)

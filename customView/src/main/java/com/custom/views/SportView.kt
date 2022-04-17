@@ -11,8 +11,6 @@ import androidx.core.content.res.ResourcesCompat
 import com.custom.dp
 
 
-
-
 class SportView(context: Context, attrs: AttributeSet?) :
     View(context, attrs) {
 
@@ -68,7 +66,12 @@ class SportView(context: Context, attrs: AttributeSet?) :
          * 动态文字
          */
         paint.getFontMetrics(fontMetrics)
-        canvas.drawText("aaaa", width / 2f, height / 2f - (fontMetrics.ascent + fontMetrics.descent) / 2f, paint)
+        canvas.drawText(
+            "aaaa",
+            width / 2f,
+            height / 2f - (fontMetrics.ascent + fontMetrics.descent) / 2f,
+            paint
+        )
 
 
     }

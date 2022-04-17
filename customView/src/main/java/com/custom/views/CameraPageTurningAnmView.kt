@@ -37,7 +37,7 @@ class CameraPageTurningAnmView(context: Context?, attrs: AttributeSet?) : View(c
 
     init {
         // 控制投影距离
-        camera.setLocation(0f,0f,-6 * resources.displayMetrics.density)
+        camera.setLocation(0f, 0f, -6 * resources.displayMetrics.density)
 
     }
 
@@ -56,29 +56,35 @@ class CameraPageTurningAnmView(context: Context?, attrs: AttributeSet?) : View(c
         super.onDraw(canvas)
         // 上半部分
         canvas.withSave {
-            canvas.translate((BITMAP_PADDING + BITMAP_SIZE/2),(BITMAP_PADDING + BITMAP_SIZE/2))
+            canvas.translate((BITMAP_PADDING + BITMAP_SIZE / 2), (BITMAP_PADDING + BITMAP_SIZE / 2))
             canvas.rotate(-flipRotation)
             camera.save()
             camera.rotateX(topFlip)
             camera.applyToCanvas(canvas)
             camera.restore()
-            canvas.clipRect(-BITMAP_SIZE,-BITMAP_SIZE,BITMAP_SIZE,0f)
+            canvas.clipRect(-BITMAP_SIZE, -BITMAP_SIZE, BITMAP_SIZE, 0f)
             canvas.rotate(flipRotation)
-            canvas.translate(-(BITMAP_PADDING + BITMAP_SIZE/2),-(BITMAP_PADDING + BITMAP_SIZE/2))
+            canvas.translate(
+                -(BITMAP_PADDING + BITMAP_SIZE / 2),
+                -(BITMAP_PADDING + BITMAP_SIZE / 2)
+            )
             canvas.drawBitmap(bitmap, BITMAP_PADDING, BITMAP_PADDING, paint)
         }
 
         // 下半部分
         canvas.withSave {
-            canvas.translate((BITMAP_PADDING + BITMAP_SIZE/2),(BITMAP_PADDING + BITMAP_SIZE/2))
+            canvas.translate((BITMAP_PADDING + BITMAP_SIZE / 2), (BITMAP_PADDING + BITMAP_SIZE / 2))
             canvas.rotate(-flipRotation)
             camera.save()
             camera.rotateX(bottomFlip)
             camera.applyToCanvas(canvas)
             camera.restore()
-            canvas.clipRect(-BITMAP_SIZE,0f,BITMAP_SIZE,BITMAP_SIZE)
+            canvas.clipRect(-BITMAP_SIZE, 0f, BITMAP_SIZE, BITMAP_SIZE)
             canvas.rotate(flipRotation)
-            canvas.translate(-(BITMAP_PADDING + BITMAP_SIZE/2),-(BITMAP_PADDING + BITMAP_SIZE/2))
+            canvas.translate(
+                -(BITMAP_PADDING + BITMAP_SIZE / 2),
+                -(BITMAP_PADDING + BITMAP_SIZE / 2)
+            )
             canvas.drawBitmap(bitmap, BITMAP_PADDING, BITMAP_PADDING, paint)
         }
     }
@@ -86,8 +92,8 @@ class CameraPageTurningAnmView(context: Context?, attrs: AttributeSet?) : View(c
     fun getAvatar(winth: Int): Bitmap {
         val options = BitmapFactory.Options()
         options.inJustDecodeBounds = true
-        BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options);
-        options.inJustDecodeBounds = false;
+        BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)
+        options.inJustDecodeBounds = false
         options.inDensity = options.outWidth
         options.inTargetDensity = winth
         return BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)

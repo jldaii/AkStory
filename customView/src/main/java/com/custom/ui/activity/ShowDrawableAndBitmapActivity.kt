@@ -1,13 +1,13 @@
 package com.custom.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.custom.views.DrawableView
 import com.custom.views.R
 
 class ShowDrawableAndBitmapActivity : AppCompatActivity() {
 
-    val vDraw by lazy{
+    val vDraw by lazy {
         findViewById<DrawableView>(R.id.v_draw)
     }
 

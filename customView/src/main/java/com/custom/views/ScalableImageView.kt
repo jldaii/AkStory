@@ -8,8 +8,6 @@ import android.view.View
 class ScalableImageView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
 
-
-
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
     }

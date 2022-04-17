@@ -5,7 +5,6 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.media.ImageReader
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.View
@@ -29,8 +28,6 @@ class MultilineTextView(context: Context?, attrs: AttributeSet?) : View(context,
     private val fontMetrics = Paint.FontMetrics()
 
 
-
-
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
@@ -45,18 +42,18 @@ class MultilineTextView(context: Context?, attrs: AttributeSet?) : View(context,
         var start = 0
         var count: Int
         var verticalOffset = -fontMetrics.top
-        var maxWidth : Float
+        var maxWidth: Float
 
-        while (start <text.length ){
+        while (start < text.length) {
             if (verticalOffset + fontMetrics.bottom < IMAGE_PADDING
                 || verticalOffset + fontMetrics.top > IMAGE_PADDING + IMAGE_SIZE
-            ){
+            ) {
                 maxWidth = width.toFloat()
-            }else{
+            } else {
                 maxWidth = width.toFloat() - IMAGE_SIZE
             }
-            count = paint.breakText(text, start,text.length,true, maxWidth, measyreWidth)
-            canvas.drawText(text, start,start + count, 0f,verticalOffset, paint)
+            count = paint.breakText(text, start, text.length, true, maxWidth, measyreWidth)
+            canvas.drawText(text, start, start + count, 0f, verticalOffset, paint)
             start += count
             verticalOffset += paint.fontSpacing
         }
@@ -66,8 +63,8 @@ class MultilineTextView(context: Context?, attrs: AttributeSet?) : View(context,
     fun getAvatar(winth: Int): Bitmap {
         val options = BitmapFactory.Options()
         options.inJustDecodeBounds = true
-        BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options);
-        options.inJustDecodeBounds = false;
+        BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)
+        options.inJustDecodeBounds = false
         options.inDensity = options.outWidth
         options.inTargetDensity = winth
         return BitmapFactory.decodeResource(resources, R.drawable.avatar_rengwuxian, options)

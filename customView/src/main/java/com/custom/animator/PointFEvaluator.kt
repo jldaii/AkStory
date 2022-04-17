@@ -1,4 +1,5 @@
 package com.custom.animator
+
 import android.animation.TypeEvaluator
 import android.graphics.PointF
 

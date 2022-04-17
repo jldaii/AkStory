@@ -26,7 +26,7 @@ class DashboardView(context: Context?, attrs: AttributeSet?) : View(context, att
 
     val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
-    private val dash = Path();
+    private val dash = Path()
 
     private val path = Path()
 

@@ -12,10 +12,10 @@ class PointFView(context: Context?, attrs: AttributeSet?) : View(context, attrs)
 
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
     private var point = PointF(0f, 0f)
-    set(value) {
-        field = value
-        invalidate()
-    }
+        set(value) {
+            field = value
+            invalidate()
+        }
 
     init {
         paint.strokeWidth = 20.dp

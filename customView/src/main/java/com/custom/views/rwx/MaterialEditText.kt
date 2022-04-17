@@ -79,9 +79,9 @@ class MaterialEditText(context: Context, attrs: AttributeSet) : AppCompatEditTex
         paint.textSize = TEXT_SIZE
 
 
-
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.MaterialEditText)
-        useFloatingLabel = typedArray.getBoolean(R.styleable.MaterialEditText_useFloatingLabel,true)
+        useFloatingLabel =
+            typedArray.getBoolean(R.styleable.MaterialEditText_useFloatingLabel, true)
         typedArray.recycle()
         if (useFloatingLabel) {
             setPadding(
@@ -116,7 +116,7 @@ class MaterialEditText(context: Context, attrs: AttributeSet) : AppCompatEditTex
 
     }
 
-    override fun onDraw(canvas: Canvas ) {
+    override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         paint.alpha = (floatingLabelFraction * 0xff).toInt()
         val currentVertivalValue =
