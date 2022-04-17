@@ -26,7 +26,7 @@ public class ParameterizedTypeImpl implements ParameterizedType {
                 }
             }
 
-            return new Type[] { new ParameterizedTypeImpl(typeArguments[0], types) };
+            return new Type[]{new ParameterizedTypeImpl(typeArguments[0], types)};
         }
 
         return typeArguments;

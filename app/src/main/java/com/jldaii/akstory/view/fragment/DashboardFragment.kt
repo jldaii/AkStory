@@ -19,7 +19,11 @@ class DashboardFragment : Fragment() {
     lateinit var btnToShowView: Button
     lateinit var btnToShowPoint: Button
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentDashboardBinding.inflate(inflater, container, false)
 
         requireActivity().apply {

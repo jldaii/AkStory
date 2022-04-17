@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         //取消toolbar的标题
 //        supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        initRvMain();
+        initRvMain()
 
     }
 
@@ -71,10 +71,15 @@ class MainActivity : AppCompatActivity() {
             RelativeLayout.LayoutParams.WRAP_CONTENT,
             RelativeLayout.LayoutParams.WRAP_CONTENT,
         )
-        if (toolbar.visibility == View.GONE){
+        if (toolbar.visibility == View.GONE) {
             LayoutParams.setMargins(rvMain.marginLeft, 0, rvMain.marginRight, rvMain.marginBottom)
-        }else{
-            LayoutParams.setMargins(rvMain.marginLeft, android.R.attr.actionBarSize, rvMain.marginRight, rvMain.marginBottom)
+        } else {
+            LayoutParams.setMargins(
+                rvMain.marginLeft,
+                android.R.attr.actionBarSize,
+                rvMain.marginRight,
+                rvMain.marginBottom
+            )
         }
     }
 

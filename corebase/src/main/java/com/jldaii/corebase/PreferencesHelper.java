@@ -2,7 +2,9 @@ package com.jldaii.corebase;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+
 import com.google.gson.Gson;
+
 import java.util.List;
 
 /**
@@ -19,6 +21,7 @@ public class PreferencesHelper {
 
     /**
      * 使用之前初始化, 可在Application中调用
+     *
      * @param context 请传入ApplicationContext避免内存泄漏
      */
     public static void init(Context context) {
@@ -38,6 +41,7 @@ public class PreferencesHelper {
      * <pre>
      * PreferencesHelper.saveData(saveUser);
      * </pre>
+     *
      * @param data 不带泛型的任意数据类型实例
      */
     public static <T> void saveData(T data) {
@@ -49,11 +53,12 @@ public class PreferencesHelper {
      * <pre>
      * PreferencesHelper.saveData(key, saveUser);
      * </pre>
+     *
      * @param data 不带泛型的任意数据类型实例
      */
     public static <T> void saveData(String key, T data) {
         checkInit();
-        if (data == null){
+        if (data == null) {
             throw new IllegalStateException("data should not be null.");
         }
         sharedPreferences.edit().putString(key, gson.toJson(data)).apply();
@@ -64,6 +69,7 @@ public class PreferencesHelper {
      * <pre>
      * PreferencesHelper.saveData(users);
      * </pre>
+     *
      * @param data List类型实例
      */
     public static <T> void saveData(List<T> data) {
@@ -79,7 +85,8 @@ public class PreferencesHelper {
      * <pre>
      * PreferencesHelper.saveData(users);
      * </pre>
-     * @param key 键值
+     *
+     * @param key  键值
      * @param data List类型实例
      */
     public static <T> void saveData(String key, List<T> data) {
@@ -161,6 +168,7 @@ public class PreferencesHelper {
 
     /**
      * 删除保存的数组
+     *
      * @param clz 集合中的实际类型
      */
     public static void removeList(Class clz) {

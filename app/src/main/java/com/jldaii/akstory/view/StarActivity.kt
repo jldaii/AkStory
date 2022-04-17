@@ -1,7 +1,7 @@
 package com.jldaii.akstory.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.jldaii.akstory.R
 
 class StarActivity : AppCompatActivity() {
