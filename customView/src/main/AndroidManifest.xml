@@ -4,6 +4,9 @@
 
     <application>
         <activity
+            android:name="com.custom.ui.activity.ShowScalableImageActivity"
+            android:exported="false" />
+        <activity
             android:name="com.custom.ui.activity.ShowProvinceViewActivity"
             android:exported="false" />
         <activity

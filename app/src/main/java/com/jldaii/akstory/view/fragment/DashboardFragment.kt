@@ -9,6 +9,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.custom.ui.activity.ShowCustomViewActivity
 import com.custom.ui.activity.ShowMaterialEditActivity
+import com.custom.ui.activity.ShowScalableImageActivity
 import com.jldaii.akstory.R
 import com.jldaii.akstory.databinding.FragmentDashboardBinding
 
@@ -44,7 +45,8 @@ class DashboardFragment : Fragment() {
 
         btnToShowPoint.setOnClickListener {
             // Intent intent = new Intent(getActivity(), ShowProvinceViewActivity.class);
-            val intent = Intent(activity, ShowMaterialEditActivity::class.java)
+//            val intent = Intent(activity, ShowMaterialEditActivity::class.java)
+            val intent = Intent(activity, ShowScalableImageActivity::class.java)
             startActivity(intent)
         }
     }
